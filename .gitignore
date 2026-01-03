@@ -1,0 +1,7 @@
+/target
+*.db
+*.lock
+.env
+.DS_Store
+logo.jpg
+signature.png

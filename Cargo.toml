@@ -1,0 +1,27 @@
+[package]
+name = "timesheet_cli"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# CLI Argument Parsing
+clap = { version = "4.5", features = ["derive"] }
+
+# Interactive Prompts
+inquire = "0.7"
+
+# Database (SQLite)
+# "bundled" is used to avoid needing a system-installed SQLite library
+rusqlite = { version = "0.38", features = ["bundled"] }
+
+# Date and Time manipulation
+chrono = "0.4"
+
+# Excel Exporting
+rust_xlsxwriter = "0.92"
+
+# Terminal Tables
+prettytable-rs = "0.10"
+
+# Environment Variables (.env)
+dotenv = "0.15"
