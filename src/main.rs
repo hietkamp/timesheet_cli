@@ -523,12 +523,13 @@ fn export_timesheet(conn: &Connection) -> Result<(), Box<dyn Error>> {
         .with_default(default_month)
         .prompt()?;
 
-    let filename = format!("/Users/reneh/Downloads/Urenstaat_{}_{}_{}.xlsx", selected_year, selected_month, selected_project);
-
     let medewerker_name = env::var("EMPLOYEE_NAME").unwrap_or("John Doe".to_string());
     let medewerker_title = env::var("EMPLOYEE_TITLE").unwrap_or("Enterprise Architect".to_string());
     let medewerker_phone = env::var("EMPLOYEE_PHONE").unwrap_or("000000000".to_string());
+    let pathname = env::var("PATH_NAME").unwrap_or("".to_string());
 
+    let filename = format!("{}Urenstaat_{}_{}_{}.xlsx", pathname, selected_year, selected_month, selected_project);
+    println!("Filename: {}", filename);
     // 3. Create Workbook
     let mut workbook = Workbook::new();
     let worksheet = workbook.add_worksheet();
