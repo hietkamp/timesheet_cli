@@ -720,7 +720,7 @@ fn export_timesheet(conn: &Connection) -> Result<(), Box<dyn Error>> {
     worksheet.merge_range(exp_header_row, 3, exp_header_row, 22, "Omschrijving", &header_expenses_fmt)?;
     worksheet.merge_range(exp_header_row, 23, exp_header_row, 26, "Bedrag excl. BTW", &header_expenses_total_fmt)?;
     worksheet.merge_range(exp_header_row, 27, exp_header_row, 29, "BTW", &header_expenses_total_fmt)?;
-    worksheet.merge_range(exp_header_row, 30, exp_header_row, 33, "Bedrag incl.", &header_expenses_total_fmt)?;
+    worksheet.merge_range(exp_header_row, 30, exp_header_row, 33, "Bedrag incl. BTW", &header_expenses_total_fmt)?;
 
     for i in 0..4 {
         let r = exp_header_row + 1 + i;
