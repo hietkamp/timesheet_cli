@@ -28,7 +28,7 @@ Create a `.env` file in the root directory of your project to configure the empl
 EMPLOYEE_NAME="John Doe"
 EMPLOYEE_TITLE="Software Engineer"
 EMPLOYEE_PHONE="+31 6 12345678"
-PATH_NAME="/Users/<username>/Downloads"
+PATH_NAME="/Users/<username>/Downloads/"
 ```
 
 Ensure the PATH_NAME has a trailing slash.
